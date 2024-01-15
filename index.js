@@ -12,5 +12,23 @@ const countries = ["Canada", "USA", "Mexico"];
 //   console.log(country);
 // }
 
-console.log(countries.map((c) => "Great " + c));
+// const copiedCountries = countries.splice();
+// copiedCountries.push("Brazil");
+
+const copiedCountries = [...countries]; // spread operator
+copiedCountries.push("Brazil");
+
 console.log(countries);
+console.log(copiedCountries);
+
+// const toArray = (a1, a2, a3) => {
+//   return [a1, a2, a3];
+// };
+
+// console.log(toArray(1, 2, 3));
+
+const toArray = (...a) => {
+  return a;
+}; // rest operator
+
+console.log(toArray(1, 2, 3, 4));
