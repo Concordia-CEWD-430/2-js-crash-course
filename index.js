@@ -6,4 +6,11 @@ const person = {
   },
 };
 
-person.introduce();
+const countries = ["Canada", "USA", "Mexico"];
+
+// for (const country of countries) {
+//   console.log(country);
+// }
+
+console.log(countries.map((c) => "Great " + c));
+console.log(countries);
