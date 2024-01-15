@@ -6,29 +6,23 @@ const person = {
   },
 };
 
-const countries = ["Canada", "USA", "Mexico"];
-
-// for (const country of countries) {
-//   console.log(country);
-// }
-
-// const copiedCountries = countries.splice();
-// copiedCountries.push("Brazil");
-
-const copiedCountries = [...countries]; // spread operator
-copiedCountries.push("Brazil");
-
-console.log(countries);
-console.log(copiedCountries);
-
-// const toArray = (a1, a2, a3) => {
-//   return [a1, a2, a3];
+// const printName = (p) => {
+//   console.log(p.name);
 // };
 
-// console.log(toArray(1, 2, 3));
+// printName(person);
 
-const toArray = (...a) => {
-  return a;
-}; // rest operator
+const printName = ({ name }) => {
+  console.log(name);
+};
 
-console.log(toArray(1, 2, 3, 4));
+printName(person);
+
+const { name, age } = person;
+console.log(name);
+console.log(age);
+
+const fruits = ["apple", "orange", "grapes"];
+const [f1, f2] = fruits;
+
+console.log(f1, f2);
